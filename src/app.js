@@ -20,10 +20,9 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 
-const mainRouter = require('./routes/main'); // Rutas main
-const productsRouter = require('./routes/products'); // Rutas /products
+const route = require('./routes/route');
 
-app.use('/', mainRouter);
-app.use('/products', productsRouter);
+app.use('/', route);
 
+app.listen('3050');
 
